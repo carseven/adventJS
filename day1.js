@@ -2,6 +2,5 @@
  * https://adventjs.dev/challenges/01
  */
 export default function contarOvejas(ovejas) {
-    const nameRegex = new RegExp('[aA][nN]')
-    return ovejas.filter((it) => it.color === 'rojo' && nameRegex.test(it.name));
+    return ovejas.filter((it) => it.color === 'rojo' && new RegExp('[aA]').test(it.name) && new RegExp('[nN]').test(it.name));
 }
