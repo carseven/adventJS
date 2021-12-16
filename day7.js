@@ -1,3 +1,6 @@
+/**
+ * https://adventjs.dev/challenges/07
+ */
 export default function contains(store, product) {
     if (store === product) return true;
     if (typeof store === 'object') {

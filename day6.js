@@ -1,5 +1,5 @@
 /**
- * https://adventjs.dev/challenges/02
+ * https://adventjs.dev/challenges/06
  */
 export default function sumPairs(numbers, result) {
     for (let i = 0; i < numbers.length; i++) {
