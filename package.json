@@ -1,0 +1,32 @@
+{
+  "name": "adventjs",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carseven/adventJS.git"
+  },
+  "author": "carseven",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carseven/adventJS/issues"
+  },
+  "homepage": "https://github.com/carseven/adventJS#readme",
+  "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-typescript": "^7.18.6",
+    "@jest/globals": "^29.3.1",
+    "@types/jest": "^29.2.3",
+    "babel-jest": "^29.3.1",
+    "jest": "29.3.1",
+    "ts-jest": "^29.0.3",
+    "typescript": "4.9.3"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.1"
+  }
+}
