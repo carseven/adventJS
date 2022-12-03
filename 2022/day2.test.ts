@@ -35,7 +35,6 @@ import { describe, expect, test } from "@jest/globals";
 type IsWorkingDate = { [day: number]: boolean };
 
 function countHours(year: number, holidays: string[]): number {
-  console.log("start");
   const isWorkingDay: IsWorkingDate = {
     0: false, // Sunday
     1: true,
@@ -51,7 +50,6 @@ function countHours(year: number, holidays: string[]): number {
     const holidayDayIndex = new Date(`${year}/${holidays[i]}`).getDay();
     if (isWorkingDay[holidayDayIndex]) {
       extraWorkHoursFromYear++;
-      console.log("Count " + extraWorkHoursFromYear);
     }
   }
   return extraWorkHoursFromYear * extraHoursPerHoliday;
