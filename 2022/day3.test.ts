@@ -49,6 +49,10 @@ function distributeGifts2(packOfGifts: string[], reindeers: string[]): number {
   return Math.trunc(reindeersMaxWeight / giftsWeight);
 }
 
+function distributeGifts3(packOfGifts: string[], reindeers: string[]): number {
+  return ((reindeers.join("").length * 2) / packOfGifts.join("").length) >> 0;
+}
+
 describe("Day 3", () => {
   test("Test 1", () => {
     // Arrange
