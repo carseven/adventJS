@@ -63,6 +63,19 @@ function fitsInOneBox(boxes: GiftBox[]): boolean {
   return true;
 }
 
+function fitsInOneBox2(boxes) {
+  return boxes
+    .sort((a, b) => getGiftPerimeter(a) - getGiftPerimeter(b))
+    .every((box, i) => {
+      if (i === 0) return true;
+      return (
+        box.l > boxes[i - 1].l &&
+        box.w > boxes[i - 1].w &&
+        box.h > boxes[i - 1].h
+      );
+    });
+}
+
 function getGiftPerimeter(gift: GiftBox): number {
   return gift.h + gift.l + gift.w;
 }
