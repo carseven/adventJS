@@ -108,33 +108,33 @@ describe("Day 5", () => {
     expect(getMaxGifts(giftsCities, maxGifts, maxCities)).toBe(20);
   });
 
-  // test("Test 2", () => {
-  //   expect(
-  //     fitsInOneBox([
-  //       { l: 1, w: 1, h: 1 },
-  //       { l: 2, w: 2, h: 2 },
-  //       { l: 3, w: 1, h: 3 },
-  //     ])
-  //   ).toBeFalsy();
-  // });
+  test("Test 2", () => {
+    expect(getMaxGifts([50], 15, 1)).toBe(0);
+  });
 
-  // test("Test 3", () => {
-  //   expect(
-  //     fitsInOneBox([
-  //       { l: 1, w: 1, h: 1 },
-  //       { l: 2, w: 2, h: 2 },
-  //       { l: 2, w: 10, h: 2 },
-  //     ])
-  //   ).toBeFalsy();
-  // });
+  test("Test 3", () => {
+    expect(getMaxGifts([50], 100, 1)).toBe(50);
+  });
 
-  // test("Test 4", () => {
-  //   expect(
-  //     fitsInOneBox([
-  //       { l: 1, w: 1, h: 1 },
-  //       { l: 3, w: 3, h: 3 },
-  //       { l: 2, w: 2, h: 2 },
-  //     ])
-  //   ).toBeTruthy();
-  // });
+  test("Test 4", () => {
+    expect(getMaxGifts([50, 70], 100, 1)).toBe(70);
+  });
+
+  test("Test 5", () => {
+    expect(getMaxGifts([50, 70, 30], 100, 2)).toBe(100);
+  });
+
+  test("Test 6", () => {
+    expect(getMaxGifts([50, 70, 30], 100, 3)).toBe(100);
+  });
+
+  test("Test 7", () => {
+    expect(getMaxGifts([50, 10, 40, 1000, 500, 200], 199, 4)).toBe(100);
+  });
+
+  test("Test 8", () => {
+    expect(getMaxGifts([50, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 1000, 1000)).toBe(
+      115
+    );
+  });
 });
