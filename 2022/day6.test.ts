@@ -40,7 +40,7 @@ Take into account:
 * Each line must be separated by a new line character \n except for the last one.
 */
 
-function createCube(size: number) {
+function createCube1(size: number) {
   let cube = "";
   for (let i = 0; i < size; i++) {
     cube +=
@@ -59,6 +59,20 @@ function createCube(size: number) {
   }
 
   return cube;
+}
+
+function createCube(size) {
+  let head = "";
+  let tail = "";
+  for (let i = 0; i < size; i++) {
+    head +=
+      " ".repeat(size - 1 - i) +
+      "/\\".repeat(i + 1) +
+      "_\\".repeat(size) +
+      "\n";
+    tail += " ".repeat(i) + "\\/".repeat(size - i) + "_/".repeat(size) + "\n";
+  }
+  return head + tail.slice(0, -1);
 }
 
 describe("Day 6", () => {
