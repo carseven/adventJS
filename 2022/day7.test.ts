@@ -46,6 +46,19 @@ function getGiftsToRefill1(a1: string[], a2: string[], a3: string[]): string[] {
   return Object.keys(toReFillGifts);
 }
 
+function getGiftsToRefill2(a1, a2, a3) {
+  const refill = [a1, a2, a3]
+    .map((a, i) => {
+      let gifts = [a1, a2, a3];
+      gifts.splice(i, 1);
+
+      return a.filter((e) => !gifts.flat().includes(e));
+    })
+    .flat();
+
+  return [...new Set(refill)];
+}
+
 function getGiftsToRefill(a1: string[], a2: string[], a3: string[]): string[] {
   const stores = [a1, a2, a3];
   const gifts = [...new Set(stores.flat())];
