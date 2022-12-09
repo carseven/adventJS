@@ -64,8 +64,4 @@ describe("Day 8", () => {
   test("Test 5", () => {
     expect(checkPart("zzzoonzzz")).toBeTruthy();
   });
-
-  test("Test 6", () => {
-    expect(checkPart("zzz onzzz")).toBeTruthy();
-  });
 });
