@@ -55,30 +55,15 @@ function checkJump(heights: number[]): boolean {
   return true;
 }
 
-// TODO
 function checkJumpOptimazed(heights: number[]): boolean {
-  const maxheight = Math.max(...heights);
-
-  const up = heights.slice(0, maxheight);
-  const down = heights.slice(maxheight);
-
-  const hasBeenUp =
-    up.length &&
-    !up.reduce((acc, curr, index, arr, prev = arr[index - 1]) => {
-      if (prev < curr) {
-        return 1;
-      }
-      return acc;
-    }, 0);
-  const hasBeenDown =
-    down.length &&
-    !down.reduce((acc, curr, index, arr, prev = arr[index - 1]) => {
-      if (curr < prev) {
-        return 1;
-      }
-      return acc;
-    }, 0);
-  return Boolean(hasBeenUp && hasBeenDown);
+  const maxHeightindex = heights.indexOf(Math.max(...heights));
+  const up = heights.slice(0, maxHeightindex);
+  const down = heights.slice(maxHeightindex + 1);
+  const hasBeenDown = down
+    .slice(1)
+    .every((height, index) => height <= down[index]);
+  const hasBeenUp = up.slice(1).every((height, index) => height >= up[index]);
+  return !!down.length && !!up.length && hasBeenDown && hasBeenUp;
 }
 
 describe("Day 10", () => {
