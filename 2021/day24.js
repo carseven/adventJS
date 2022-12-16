@@ -1,5 +1,5 @@
 /**
- * https://adventjs.dev/challenges/23
+ * https://adventjs.dev/challenges/24
  */
 export default function checkIsSameTree(treeA, treeB) {
   if (!treeA && !treeB) return true;

@@ -1,5 +1,5 @@
 /**
- * https://adventjs.dev/challenges/23
+ * https://adventjs.dev/challenges/25
  */
 export default function canReconfigure(from, to) {
   if (from.length !== to.length) return false;
