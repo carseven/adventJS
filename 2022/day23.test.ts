@@ -35,7 +35,7 @@ executeCommands([
 ```
 */
 
-function executeCommands(commands) {
+function executeCommands(commands: string[]): number[] {
   let cpu = [0, 0, 0, 0, 0, 0, 0, 0];
 
   let cmd = {
